@@ -7,16 +7,22 @@ import StyledButton from "../../../components/StyledButton/StyledButton";
 
 const Hero = () => {
 
-  const StyledHero = styled("div")(() => ({
+  const StyledHero = styled("div")(({ theme }) => ({
     height: "100vh",
     display: "flex",
     alignItems: "center",
+    [theme.breakpoints.down("md")]: {
+      margin: "0 20px",
+    }
   }))
 
-  const StyledImg = styled("img")(() => ({
+  const StyledImg = styled("img")(({ theme }) => ({
     width: "50%",
     display: "block",
     margin: "0 auto",
+    [theme.breakpoints.down("md")]: {
+      display: "none",
+    }
   }))
   
   return (
@@ -26,9 +32,9 @@ const Hero = () => {
           <Grid container>
             <Grid size={{ xs: 12, md: 7 }}>
               <Typography align="center">Hey, I'm</Typography>
-              <Typography variant="h2" align="center">Karina Sasaki</Typography>
+              <Typography variant="h2" align="center" pb={2}>Karina Sasaki</Typography>
               <Typography align="center">A Software Developer</Typography>
-              <Grid container display="flex" justifyContent="center" spacing={3}>
+              <Grid container display="flex" justifyContent="center" spacing={3} pt={3}>
                 <Grid size={{ xs: 12, md: 4 }} display="flex" justifyContent="center">
                   <StyledButton>
                     <DownloadIcon/>
