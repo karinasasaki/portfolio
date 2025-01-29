@@ -1,24 +1,30 @@
 import { createTheme, responsiveFontSizes } from '@mui/material/styles';
-import { green, purple } from '@mui/material/colors';
 
 let theme = createTheme({
   palette: {
     primary: {
-      main: purple[500],
+      main: "#1F362D",
+      dark: "#0F1B16",
     },
     secondary: {
-      main: green[500],
+      main: "#c5dfd6",
+    },
+    background: {
+      default: "#e2ede9"
     }
   },
   typography: {
-    fontFamily: "Roboto Slab",
+    fontFamily: "Montserrat",
     fontSize: 21,
+    fontWeightRegular: 300,
     h1: {
-      fontFamily: "Shrikhand"
+      color: "#1F362D",
+      fontSize: 60,
+      fontWeight: 700,
     },
     h2: {
-      fontFamily: "Roboto Mono",
-      fontSize: 40
+      fontSize: 40,
+      fontWeight: 400,
     }
   }
 });
